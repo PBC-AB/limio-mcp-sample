@@ -18,7 +18,7 @@ class LimioMCPServer:
     def __init__(self):
         self.client_id = os.getenv("CLIENT_ID")
         self.client_secret = os.getenv("CLIENT_SECRET")
-        self.base_url = os.getenv("BASE_URL", "https://saas-dev.prod.limio.com")
+        self.base_url = os.getenv("BASE_URL", "https://api.example-saas.com")
         self.token = None
         self.session_data = {
             'customer': None,
@@ -306,9 +306,9 @@ def demo_session():
     print("=== Limio MCP Server Demo ===\n")
     
     # Step 1: Identify customer
-    print("User: I'm amaury+27051908@limio.com\n")
+    print("User: I'm john.doe+test@example.com\n")
     
-    result = server.identify_customer("amaury+27051908@limio.com")
+    result = server.identify_customer("john.doe+test@example.com")
     print(f"Assistant: {result['message']}")
     
     if result['success'] and result['subscriptions']:

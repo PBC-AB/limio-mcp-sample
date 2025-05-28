@@ -71,6 +71,9 @@ instance/
 # Sphinx documentation
 docs/_build/
 
+# Logs
+limio_mcp_server.log
+
 # PyBuilder
 .pybuilder/
 target/

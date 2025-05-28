@@ -68,8 +68,8 @@ Email → Find Customer → Get Subscriptions → Get Related Objects
 ```
 User: "I'm john@example.com"
 Bot: "Welcome John! I found 2 subscriptions for you:
-      1. Digital Monthly (sub-abc123) - Active
-      2. Premium Annual (sub-xyz789) - Cancelled"
+      1. Digital Monthly (sub-x9y8z7w6v5u4321098765432109876ba) - Active
+      2. Premium Annual (sub-m5n6o7p8q9r0123456789012345678cd) - Cancelled"
 
 User: "Tell me about the Digital Monthly"
 Bot: "Your Digital Monthly subscription is active.
@@ -186,4 +186,4 @@ For Limio API support: support@limio.com
 
 ---
 
-*This implementation is based on testing with the Limio API sandbox environment at https://saas-dev.prod.limio.com*
+*This implementation is based on testing with the Limio API sandbox environment at https://api.example-saas.com*

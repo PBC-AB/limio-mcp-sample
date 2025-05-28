@@ -108,7 +108,7 @@ from typing import Dict, List, Optional
 
 class LimioClient:
     def __init__(self):
-        self.base_url = os.getenv("LIMIO_BASE_URL", "https://saas-dev.prod.limio.com")
+        self.base_url = os.getenv("LIMIO_BASE_URL", "https://api.example-saas.com")
         self.client_id = os.getenv("LIMIO_CLIENT_ID")
         self.client_secret = os.getenv("LIMIO_CLIENT_SECRET")
         self.token = None
@@ -351,14 +351,14 @@ if __name__ == "__main__":
 ```
 LIMIO_CLIENT_ID=your_client_id_here
 LIMIO_CLIENT_SECRET=your_client_secret_here
-LIMIO_BASE_URL=https://saas-dev.prod.limio.com
+LIMIO_BASE_URL=https://api.example-saas.com
 ```
 
 ## Hackathon Usage Flow
 
 1. **User provides customer ID**
    ```
-   User: "My customer ID is cus-886716de7dba964a9c74ffb7736ac9b3"
+   User: "My customer ID is cus-a1b2c3d4e5f6789012345678901234ab"
    ```
 
 2. **Assistant lists subscriptions**
@@ -413,7 +413,7 @@ LIMIO_BASE_URL=https://saas-dev.prod.limio.com
 
 4. **Test it!**
    - Restart Claude Desktop
-   - Ask: "Using the Limio tools, get subscriptions for customer cus-886716de7dba964a9c74ffb7736ac9b3"
+   - Ask: "Using the Limio tools, get subscriptions for customer cus-a1b2c3d4e5f6789012345678901234ab"
 
 ## Extension Ideas for Hackathon
 

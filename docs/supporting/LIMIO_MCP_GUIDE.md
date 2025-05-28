@@ -86,7 +86,7 @@ def get_oauth_token(base_url, client_id, client_secret):
     },
     {
       "record_type": "customer",
-      "id": "cus-886716de7dba964a9c74ffb7736ac9b3",
+      "id": "cus-a1b2c3d4e5f6789012345678901234ab",
       "data": {
         "name": "John Doe",
         "email": "john@example.com"
@@ -287,16 +287,16 @@ User: "I'm john@example.com"
 
 MCP Server:
 1. Calls identify_customer(email="john@example.com")
-2. Finds customer ID: cus-123456
-3. Calls list_subscriptions(customer_id="cus-123456")
+2. Finds customer ID: cus-a1b2c3d4e5f6789012345678901234ab
+3. Calls list_subscriptions(customer_id="cus-a1b2c3d4e5f6789012345678901234ab")
 4. Returns: "I found 2 subscriptions for you:
-   - Digital Monthly (sub-abc123) - Active
-   - Premium Annual (sub-xyz789) - Cancelled"
+   - Digital Monthly (sub-x9y8z7w6v5u4321098765432109876ba) - Active
+   - Premium Annual (sub-m5n6o7p8q9r0123456789012345678cd) - Cancelled"
 
-User: "Tell me about the Digital Monthly subscription"
+**Follow-up Question**: "Tell me about sub-x9y8z7w6v5u4321098765432109876ba"
 
 MCP Server:
-1. Calls get_subscription_context(subscription_id="sub-abc123")
+1. Calls get_subscription_context(subscription_id="sub-x9y8z7w6v5u4321098765432109876ba")
 2. Caches all related objects
 3. Returns: "Your Digital Monthly subscription is active. It started on Jan 1, 2025 
    and will renew on Feb 1, 2025. Auto-renewal is enabled."
@@ -316,7 +316,7 @@ MCP Server:
 ### Required Configuration
 - [ ] OAuth Client ID
 - [ ] OAuth Client Secret
-- [ ] Base URL (e.g., https://saas-dev.prod.limio.com)
+- [ ] Base URL (e.g., https://api.example-saas.com)
 - [ ] Token refresh logic
 
 ### Core Functions to Implement
