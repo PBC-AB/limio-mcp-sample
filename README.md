@@ -13,6 +13,39 @@ This MCP server provides tools for querying Limio customer subscriptions, subscr
 - Retrieve recent events for a subscription
 - Automatic OAuth token management
 
+## VAPI Wrapper Service
+
+This repository also includes a VAPI wrapper service that can be run through ngrok for external access.
+
+### Running the VAPI Wrapper
+
+After completing the installation steps above, you can start the VAPI wrapper service using the provided script:
+
+```bash
+./start-vapi-wrapper.sh
+```
+
+This script will:
+1. Load environment variables from your `.env` file
+2. Start the VAPI wrapper Python service
+3. Expose the service through ngrok with authentication
+
+### Required Environment Variables
+
+Add the following variables to your `.env` file for the VAPI wrapper:
+
+```
+NGROK_URL=your-ngrok-static-url-here
+NGROK_AUTH_USER=your-auth-username
+NGROK_AUTH_PASS=your-auth-password
+```
+
+- `NGROK_URL`: Your ngrok static URL (requires ngrok paid plan for static URLs)
+- `NGROK_AUTH_USER`: Basic authentication username for securing the ngrok tunnel
+- `NGROK_AUTH_PASS`: Basic authentication password for securing the ngrok tunnel
+
+The service will be available on port 8000 and accessible through your configured ngrok URL with basic authentication.
+
 ## Installation
 
 1. Clone this repository
